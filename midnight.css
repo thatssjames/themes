@@ -655,6 +655,9 @@ button.button_dd4f85 /* small buttons */,
 	height: calc(var(--spacing) + 8px);
 	margin: -2px 4px 0px 0px;
 }
+[class^='winButtonClose'] {
+	margin: -2px calc(var(--spacing) - 4px) 0px 0px;
+}
 [class^='winButton']::after {
 	content: '';
 	height: 12px;
@@ -667,6 +670,16 @@ button.button_dd4f85 /* small buttons */,
 [class^='winButton']:active::after {
 	transform: scale(0.9);
 }
+[class^='winButtonClose']::after {
+	background-color: var(--dnd-indicator) !important;
+}
+[class^='winButtonMinMax']:nth-child(3)::after {
+	background-color: var(--online-indicator) !important;
+}
+[class^='winButtonMinMax']:nth-child(4)::after {
+	background-color: var(--idle-indicator) !important;
+}
+
 /* custom dm button moon icon */
 .childWrapper_f90abb > svg:not(.favoriteIcon_dcc7a4) {
 	display: var(--discord-icon);
